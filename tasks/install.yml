@@ -1,0 +1,4 @@
+- name: Install strongswan
+  package:
+    name: "{{ strongswan_pkg }}{% if strongswan_version %}-{{ strongswan_version }}{% endif %}"
+    state: present

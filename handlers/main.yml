@@ -1,0 +1,13 @@
+- name: Reload strongswan
+  service:
+    name: "{{ item }}"
+    state: reloaded
+  listen: strongswan:reload
+  loop: "{{ strongswan_enabled | ternary(strongswan_services, []) }}"
+
+- name: Restart strongswan
+  service:
+    name: "{{ item }}"
+    state: restarted
+  listen: strongswan:restart
+  loop: "{{ strongswan_enabled | ternary(strongswan_services, []) }}"
