@@ -1,0 +1,6 @@
+- name: Set service state
+  service:
+    name: "{{ item }}"
+    enabled: "{{ strongswan_enabled }}"
+    state: "{{ strongswan_enabled | ternary('started', 'stopped') }}"
+  loop: "{{ strongswan_services }}"

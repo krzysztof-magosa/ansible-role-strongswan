@@ -1,0 +1,7 @@
+strongswan_default_version: ""
+strongswan_pkg: "strongswan"
+strongswan_conf_dir: "/etc/strongswan"
+strongswan_conf_file: "{{ strongswan_conf_dir }}/strongswan.conf"
+strongswan_services:
+  - "ipsec"
+strongswan_cmd: "ipsec"

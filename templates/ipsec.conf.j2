@@ -1,0 +1,9 @@
+{{ ansible_managed | comment }}
+
+{% for name, conn in strongswan_conns.items() %}
+conn {{ name }}
+{% for key, value in conn.items() %}
+    {{ key }}={% if value is boolean %}{{ value | ternary("yes", "no") }}{% else %}{{ value }}{% endif %}
+
+{% endfor %}
+{% endfor %}

@@ -1,0 +1,24 @@
+galaxy_info:
+  role_name: "strongswan"
+  author: "Krzysztof Magosa"
+  description: "Installs and configures StrongSwan"
+  license: "MIT"
+  min_ansible_version: "2"
+  platforms:
+    - name: EL
+      versions:
+        - 8
+        - 7
+    - name: Debian
+      versions:
+        - bullseye # 11
+        - buster   # 10
+    - name: Ubuntu
+      versions:
+        - disco
+        - bionic
+  # galaxy_tags:
+  #   - tag_name
+
+dependencies:
+  - krzysztof-magosa.epel

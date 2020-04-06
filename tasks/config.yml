@@ -1,0 +1,17 @@
+- name: Template ipsec.secrets
+  template:
+    src: ipsec.secrets.j2
+    dest: /etc/ipsec.secrets
+    owner: root
+    group: root
+    mode: "0600"
+  notify: strongswan:reload
+
+- name: Template ipsec.conf
+  template:
+    src: ipsec.conf.j2
+    dest: /etc/ipsec.conf
+    owner: root
+    group: root
+    mode: "0644"
+  notify: strongswan:reload
