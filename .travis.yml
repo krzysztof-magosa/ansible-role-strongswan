@@ -14,6 +14,7 @@ env:
   - TOX_ENV: ansible29
 
 script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - tox --workdir $(mktemp -d) -e ${TOX_ENV}
 
 notifications:
