@@ -44,8 +44,8 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
   # Ubuntu
-  - name: ${TOX_ENVNAME}-ubuntu19
-    image: krzysztofmagosa/ubuntu19.04-ansible-compat
+  - name: ${TOX_ENVNAME}-ubuntu20
+    image: krzysztofmagosa/ubuntu20.04-ansible-compat
     pre_build_image: true
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro

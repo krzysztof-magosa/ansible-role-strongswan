@@ -1,8 +1,8 @@
 {{ ansible_managed | comment }}
 
-{% for name, conn in strongswan_conns.items() %}
+{% for name, conn in strongswan_conns | dictsort %}
 conn {{ name }}
-{% for key, value in conn.items() %}
+{% for key, value in conn | dictsort %}
     {{ key }}={% if value is boolean %}{{ value | ternary("yes", "no") }}{% else %}{{ value }}{% endif %}
 
 {% endfor %}

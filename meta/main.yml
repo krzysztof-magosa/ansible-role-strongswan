@@ -15,7 +15,7 @@ galaxy_info:
         - buster   # 10
     - name: Ubuntu
       versions:
-        - disco
+        - focal
         - bionic
   # galaxy_tags:
   #   - tag_name
